@@ -1,0 +1,51 @@
+{
+  "type": "component",
+  "metadata": {},
+  "schema": {
+    "name": "background-image-container",
+    "friendlyName": "background-image-container",
+    "description": "un vrai component background-image ou l'on peut mettre des truc dedans",
+    "icon": "ImageAdd",
+    "hasChildren": true,
+    "settings": [
+      {
+        "type": "text",
+        "key": "url",
+        "label": "URL",
+        "required": true
+      },
+      {
+        "type": "select",
+        "key": "position",
+        "label": "Position",
+        "defaultValue":"center center",
+        "options":[
+          {"value":"center top","label":"Center Top"},
+          {"value":"center center","label":"Center"},
+          {"value":"center bottom","label":"Center Bottom"},
+          {"value":"left top","label":"Left Top"},
+          {"value":"left center","label":"Left"},
+          {"value":"left bottom","label":"Left Bottom"},
+          {"value":"right top","label":"Right Top"},
+          {"value":"right center","label":"Right"},
+          {"value":"right bottom","label":"Right Bottom"}
+        ]
+      },
+      {
+        "type": "select",
+        "key": "size",
+        "label": "Size",
+        "defaultValue":"cover",
+        "options":[
+          {"value":"cover","label":"Cover"},
+          {"value":"contain","label":"Contain"}
+        ]
+      },
+      {
+        "type": "boolean",
+        "key": "repeat",
+        "label": "Repeat"
+      }
+    ]
+  }
+}
