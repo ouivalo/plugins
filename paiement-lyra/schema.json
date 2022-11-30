@@ -8,9 +8,46 @@
     "icon": "Text",
     "settings": [
       {
+        "type": "number",
+        "key": "amount",
+        "label": "Montant"
+      },
+      {
         "type": "text",
-        "key": "text",
-        "label": "Text"
+        "key": "orderId",
+        "label": "idCommande"
+      },
+      {
+        "type": "text",
+        "key": "paymentMethodToken",
+        "label": "Alias"
+      },
+      {
+        "type": "select",
+        "key": "formAction",
+        "label": "Type",
+        "defaultValue":"PAYMENT",
+        "options":[
+          {"value":"PAYMENT","label":"Paiement simple"},
+          {"value":"REGISTER_PAY","label":"Paiement avec création d'abonnement"},
+          {"value":"SILENT","label":"Paiement de l'abonnement"},
+          {"value":"CREATE_ALIAS","label":"creation d'abonnement sans paiement"}
+        ]
+      },
+      {
+        "type": "text",
+        "key": "customer_reference",
+        "label": "Acheteur ID"
+      },
+      {
+        "type": "text",
+        "key": "customer_email",
+        "label": "Acheteur email"
+      },
+      {
+        "type": "text",
+        "key": "customer_billingDetails_firstName",
+        "label": "Acheteur nom"
       }
     ]
   }
