@@ -1,0 +1,30 @@
+{
+  "type": "component",
+  "metadata": {},
+  "schema": {
+    "name": "md5",
+    "friendlyName": "md5",
+    "description": "generate your secret token",
+    "icon": "Gears",
+    "hasChildren": true,
+    "settings": [
+      {
+        "type": "text",
+        "key": "secret",
+        "label": "secret"
+      }
+    ],
+    "context": [
+      {
+        "type": "static",
+        "values": [
+          {
+            "label": "Token",
+            "key": "token",
+            "type": "text"
+          }
+        ]
+      }
+    ]
+  }
+}
