@@ -1,0 +1,12 @@
+{
+  "type": "component",
+  "metadata": {},
+  "schema": {
+    "name": "paiement-form",
+    "friendlyName": "paiement-form",
+    "description": "paiement via lyra de sogecommerce",
+    "icon": "Text",
+    "settings": [
+    ]
+  }
+}
