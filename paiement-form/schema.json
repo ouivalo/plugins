@@ -7,6 +7,16 @@
     "description": "paiement via lyra de sogecommerce",
     "icon": "Text",
     "settings": [
+      {
+        "type": "text",
+        "key": "vads_order_id",
+        "label": "Order ID"
+      },
+      {
+        "type": "text",
+        "key": "vads_trans_id",
+        "label": "Trasaction ID"
+      }
     ]
   }
 }
