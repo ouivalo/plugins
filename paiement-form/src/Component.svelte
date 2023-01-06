@@ -1,8 +1,6 @@
 <script>
   import { getContext } from "svelte"
-  import hmacSHA256 from 'crypto-js/sha256';
-  import Base64 from 'crypto-js/enc-base64';
-  import Utf8 from 'crypto-js/enc-utf8';
+  import CryptoJS from "crypto-js"
 
   const { styleable } = getContext("sdk")
   const component = getContext("component")
@@ -31,10 +29,11 @@
     message += data[keys] + '+'
 
   message += secret
-  let message8 = Utf8.stringify(message)
-  console.log(message)
-  console.log(message8)
-  console.log(Base64.stringify(hmacSHA256(message,Utf8.stringify(secret))))
+
+  let message8 = CryptoJS.enc.Utf8.parse(message)
+  let secret8 = CryptoJS.enc.Utf8.parse(secret)
+
+  const signature = CryptoJS.enc.Base64.stringify(CryptoJS.HmacSHA256(message8,secret8))
   
 </script>
 
@@ -59,7 +58,7 @@
     <input type="hidden" name="vads_trans_date" value="20190626101407" />
     <input type="hidden" name="vads_trans_id" value="pt156G" />
     <input type="hidden" name="vads_version" value="V2" />
-    <input type="hidden" name="signature" value="0WaYrONo3L0VZqMcvyVf8vT/g8KfZKJ+1jqiAs3Ehiw="/>
+    <input type="hidden" name="signature" value="{signature}"/>
     <input type="submit" name="payer" value="Payer"/>
   </form>
 </div>
